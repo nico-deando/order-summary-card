@@ -1,0 +1,192 @@
+:root {
+    /* ### Primary colors */
+
+    --clr-base: hsl(225, 100%, 94%);
+    --clr-base-blue: hsl(245, 75%, 52%);
+
+    /* ### Neutral colors */
+
+    --clr-base-light: hsl(225, 100%, 98%);
+    --clr-base-opaque: hsl(224, 23%, 55%);
+    --clr-base-dark: hsl(223, 47%, 23%);
+    /* Fonts */
+
+    --fnt-base: 'Red Hat Display', sans-serif;
+
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+    height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+body {
+    min-width: 300px;
+    margin: 1rem;
+    background-image: url("/images/pattern-background-mobile.svg");
+    background-position: center;
+    background-size: cover;
+    font-family: var(--fnt-base);
+    font-weight: 500;
+    color: var(--clr-base-opaque);
+    display: grid;
+    place-content: center;
+    
+}
+
+.order__summary {
+    max-width: 450px;
+    display: grid;
+    margin: 1em;
+    place-content: center;
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.order__content {
+    display: grid;
+    background-color: var(--clr-base-light);
+    padding: 1.5em;
+}
+
+.order__tittle {
+    text-align: center;
+    font-weight: 900;
+    color: var(--clr-base-dark);
+    margin-bottom: 1rem;
+}
+.order__about{
+    text-align: center;
+    margin-bottom: 1em;
+    line-height: 1.7;
+}
+@media(min-width:450px){
+    .order__about{
+
+        font-size: 1.2em;
+        
+    }
+}
+
+.flex__group {
+    display: flex;
+    place-content: center;
+    padding: 0;
+    margin-bottom: 1.5em;
+}
+
+.order__plan{
+    color:var(--clr-base-dark);
+    font-weight: 700;
+}
+.wrap__group{
+    margin-left: 1em;
+    margin-right: 0.6em;
+
+}
+@media(min-width:450px){
+    .wrap__group{
+        margin-left: 1.7em;
+        margin-right: 3em;
+    }
+    .flex__group{
+    }
+}
+.button{
+    background-color: var(--clr-base-blue);
+    color:var(--clr-base);
+    font-weight: 700;
+    padding: .8em 1.5em;
+    margin-bottom: .5em;
+    border-style: none;
+    border-radius: .5em;
+}
+
+.button:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    background-color: var(--clr-base-dark);
+}
+.button--cancel{
+    background-color: var(--clr-base-light);
+    color: var(--clr-base-opaque);
+    box-shadow: none;
+}
+.button--cancel:hover{
+    box-shadow: none;
+    background-color: var(--clr-base-light);
+}
